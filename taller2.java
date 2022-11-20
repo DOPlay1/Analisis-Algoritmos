@@ -7,20 +7,15 @@ import java.util.LinkedList;
  * @author DO
  */
 public class Taller_dos {
-
     node head;
     node sorted;
-
     class node {
-
         int val;
         node next;
-
         public node(int val) {
             this.val = val;
         }
     }
-
     void push(int val) {
         /* allocate node */
         node newnode = new node(val);
@@ -29,13 +24,10 @@ public class Taller_dos {
         /* move the head to point to the new node */
         head = newnode;
     }
-    
-    
     void deleteList()
     {
         head = null;
     }
-
     // function to sort a singly linked list using insertion sort
     void insertionSort(node headref) {
         // Initialize sorted linked list
@@ -54,7 +46,6 @@ public class Taller_dos {
         // Update head_ref to point to sorted linked list
         head = sorted;
     }
-
     /*
 	* function to insert a new_node in a list. Note that
 	* this function expects a pointer to head_ref as this
@@ -76,20 +67,17 @@ public class Taller_dos {
             current.next = newnode;
         }
     }
-
     /* Function to print linked list */
     void printlist(node head) {
         while (head != null) {
             System.out.print(head.val + " ");
             head = head.next;
         }
-    }
-    
+    }    
     static int randomNumber() {
         int randNumber = ThreadLocalRandom.current().nextInt(1, 1000 + 1);
         return randNumber;
     }
-
     // Driver program to test above functions
     public static void main(String[] args) {
         
@@ -109,7 +97,6 @@ public class Taller_dos {
             tiempos[i] = tiempo;         
             list.deleteList();          
         }
-        
         System.out.println(Arrays.toString(tiempos));
     }
 }
